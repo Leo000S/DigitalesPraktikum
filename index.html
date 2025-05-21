@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JupyterLite Tutorial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/@jupyterlite/app@0.5.0/dist/index.js"></script>
+  <script>
+    window.JupyterLite.start({
+      baseUrl: './',
+      liteConfigOverrides: {
+        federation: {
+          federationUrl: './jupyter-lite.json'
+        },
+        launchSettings: {
+          defaultPath: 'content/tutorial.ipynb'  // Passe hier deinen Notebook-Namen an!
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Loading JupyterLite…</h1>
+</body>
+</html>
